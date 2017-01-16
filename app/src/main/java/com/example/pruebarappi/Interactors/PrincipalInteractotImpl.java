@@ -47,7 +47,9 @@ public class PrincipalInteractotImpl implements PrincipalInteractor{
     List<PostToList> postsList = new ArrayList<>();
     PostAdapter adapter;
 
-    int checkNewPost = 0;
+    int checkNewPost = 1;
+    int allPost = 0;
+    int actuallyPost = 0;
 
     /**
      * @Autor: Luis Jimenez
@@ -173,6 +175,9 @@ public class PrincipalInteractotImpl implements PrincipalInteractor{
 
                     //Procesar array con noticias
                     for(int i = 1; i < jsonArrayPost.length(); i++){
+                        allPost = jsonArrayPost.length();
+                        actuallyPost = i;
+                        publishProgress();
 
                         JSONObject post = jsonArrayPost.getJSONObject(i);
                         JSONObject postData = post.getJSONObject("data");
@@ -237,6 +242,12 @@ public class PrincipalInteractotImpl implements PrincipalInteractor{
                 Log.e(TAG, "Response is null, Check this url: " + URL);
             }
             return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+            listenerClass.onProgressUpdate("Descargando noticia " + actuallyPost + " de " + allPost);
         }
 
         @Override
