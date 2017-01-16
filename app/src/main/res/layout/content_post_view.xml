@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_post"
+    tools:context="com.example.pruebarappi.Views.PostViewActivity"
+    tools:showIn="@layout/activity_post_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/RlSuperior">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imgBanner"
+            android:background="@color/colorAccent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RlInferior"
+        android:layout_below="@+id/RlSuperior">
+
+        <TextView
+            android:text="Titulo:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="14sp"
+            android:textStyle="normal|bold"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:text="Este es un Post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            android:id="@+id/txtPostName"
+            android:textSize="12sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="23dp"
+            android:layout_height="@dimen/cardview_compat_inset_shadow" />
+
+        <TextView
+            android:text="Publicado el:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="90dp"
+            android:id="@+id/textView4"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="11 de Marzo de 2017"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDate"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/txtPostName"
+            android:layout_alignStart="@+id/txtPostName"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/txtDate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="@dimen/cardview_compat_inset_shadow" />
+
+        <TextView
+            android:text="Susbcriptores:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:id="@+id/textView5"
+            android:textStyle="normal|bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:text="2226410"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSubs"
+            android:layout_below="@+id/textView5"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/txtSubs"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="@dimen/cardview_compat_inset_shadow" />
+
+        <TextView
+            android:text="https://reddit.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUrl"
+            android:layout_below="@+id/textView8"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/txtUrl"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="@dimen/cardview_compat_inset_shadow" />
+
+        <TextView
+            android:text="Url:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textStyle="normal|bold"
+            android:textSize="14sp"
+            android:layout_below="@+id/txtSubs"
+            android:layout_alignLeft="@+id/txtUrl"
+            android:layout_alignStart="@+id/txtUrl"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:text="Noticia Adicional.................................."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:id="@+id/txtDescription"
+            android:layout_alignTop="@+id/textView10"
+            android:layout_alignLeft="@+id/txtSubs"
+            android:layout_alignStart="@+id/txtSubs"
+            android:textSize="12sp" />
+
+        <TextView
+            android:text="Información Adicional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_below="@+id/txtUrl"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
